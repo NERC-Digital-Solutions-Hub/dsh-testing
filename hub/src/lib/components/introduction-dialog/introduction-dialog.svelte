@@ -27,14 +27,14 @@
 
 			<Dialog.Content
 				class="fixed left-1/2 top-1/2 z-[9999] grid -translate-x-1/2 -translate-y-1/2 m-0 p-0 border-none
-			 !w-[50vw] !max-w-[50vw] h-[90vh] min-h-0 pt-4 pb-4 overflow-hidden"
+			 !w-[50vw] !max-w-[50vw] h-[90vh] min-h-0 pt-4 overflow-hidden"
 			>
 				{#await introductionHtml}
 					<div class="flex h-full w-full items-center justify-center">
 						<Spinner class="w-10 h-10" />
 					</div>
 				{:then html}
-					<ScrollArea class="h-full min-h-0 w-full">
+					<ScrollArea class="h-full min-h-0 w-full pl-7 pr-7">
 						<article class="prose prose-home-intro-dialog mx-auto w-full max-w-none pt-6 pb-6">
 							{@html html}
 						</article>
